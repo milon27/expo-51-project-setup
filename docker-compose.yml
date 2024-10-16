@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  web-app:
+    container_name: web-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: prod
+    restart: always
+    ports:
+      - 5000:80
