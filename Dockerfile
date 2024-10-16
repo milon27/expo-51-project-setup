@@ -1,5 +1,5 @@
 # # ------------------ build -------------------
-FROM node:20.15.1-alpine as build
+FROM node:20.15.1-alpine AS build
 RUN npm install -g pnpm@8.12.1
 
 WORKDIR /app
@@ -11,7 +11,7 @@ RUN pnpm web:build
 
 
 # # # ------------------ deploy -------------------
-FROM nginx:alpine as prod
+FROM nginx:alpine AS prod
 
 # Copy your custom Nginx configuration file
 COPY ./.nginx/nginx.conf /etc/nginx/conf.d/default.conf
