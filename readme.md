@@ -8,7 +8,9 @@ Expo project setup with
 
 ```bash
 # install dependency
-npx expo install
+pnpm install
+# install new dependency
+npx expo install something
 # start the project
 pnpm start
 ```
